@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8947DEE7-FAD4-4563-9134-D852E026D8A7}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>AllAccess.Droid</RootNamespace>
+    <AssemblyName>AllAccess.Android</AssemblyName>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Messaging">
+      <Version>5.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.1.0.697729</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v4">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\GradientPageRenderer.cs" />
+    <Compile Include="Renderers\DragDropListRenderer.cs" />
+    <Compile Include="Custom\SwapObject.cs" />
+    <Compile Include="Custom\ItemDragListener.cs" />
+    <Compile Include="Renderers\DragDropViewCellRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\drawable\threemiles.png" />
+    <AndroidResource Include="Resources\drawable\tenmiles.png" />
+    <AndroidResource Include="Resources\drawable\thirtymiles.png" />
+    <AndroidResource Include="Resources\drawable\A_ZBtnn.png" />
+    <AndroidResource Include="Resources\drawable\AA58.png" />
+    <AndroidResource Include="Resources\drawable\AA72.png" />
+    <AndroidResource Include="Resources\drawable\AAMENU.png" />
+    <AndroidResource Include="Resources\drawable\ABOUTUS.png" />
+    <AndroidResource Include="Resources\drawable\AccessByCodesBtn.png" />
+    <AndroidResource Include="Resources\drawable\AccessByNameBtn.png" />
+    <AndroidResource Include="Resources\drawable\AccessMeCircle.png" />
+    <AndroidResource Include="Resources\drawable\AccessUsCircle.png" />
+    <AndroidResource Include="Resources\drawable\ADD_TO_FAVORITES.png" />
+    <AndroidResource Include="Resources\drawable\Add.png" />
+    <AndroidResource Include="Resources\drawable\AddBusinessBtn.png" />
+    <AndroidResource Include="Resources\drawable\AddressButton.png" />
+    <AndroidResource Include="Resources\drawable\AllAccess.png" />
+    <AndroidResource Include="Resources\drawable\AllAccessBtn.png" />
+    <AndroidResource Include="Resources\drawable\AllAccessButton.png" />
+    <AndroidResource Include="Resources\drawable\AllAccessGreenScanCircleTransparent.png" />
+    <AndroidResource Include="Resources\drawable\AllAccessScanningCircle.png" />
+    <AndroidResource Include="Resources\drawable\AllAccessSymbolButton.png" />
+    <AndroidResource Include="Resources\drawable\AllBtn.png" />
+    <AndroidResource Include="Resources\drawable\AllRestaurantsBtn.png" />
+    <AndroidResource Include="Resources\drawable\AmericanBtn.png" />
+    <AndroidResource Include="Resources\drawable\AntiquesBtn.png" />
+    <AndroidResource Include="Resources\drawable\APP.png" />
+    <AndroidResource Include="Resources\drawable\AppBtn.png" />
+    <AndroidResource Include="Resources\drawable\appico_72.png" />
+    <AndroidResource Include="Resources\drawable\ArcadeBtn.png" />
+    <AndroidResource Include="Resources\drawable\ArrowButtons.psd" />
+    <AndroidResource Include="Resources\drawable\ArtMuseumsBtn.png" />
+    <AndroidResource Include="Resources\drawable\ArtsBtn.png" />
+    <AndroidResource Include="Resources\drawable\AsianBtn.png" />
+    <AndroidResource Include="Resources\drawable\ATMBanking.png" />
+    <AndroidResource Include="Resources\drawable\ATMBankingBtn.png" />
+    <AndroidResource Include="Resources\drawable\ATMS.png" />
+    <AndroidResource Include="Resources\drawable\Auto.png" />
+    <AndroidResource Include="Resources\drawable\AutoBtn.png" />
+    <AndroidResource Include="Resources\drawable\AutoShopBtn.png" />
+    <AndroidResource Include="Resources\drawable\AutoTravelBtn.png" />
+    <AndroidResource Include="Resources\drawable\AVMENU.png" />
+    <AndroidResource Include="Resources\drawable\BabyKidsBtn.png" />
+    <AndroidResource Include="Resources\drawable\Back.png" />
+    <AndroidResource Include="Resources\drawable\BagelsBtn.png" />
+    <AndroidResource Include="Resources\drawable\BakeriesBtn.png" />
+    <AndroidResource Include="Resources\drawable\BakeryBtn.png" />
+    <AndroidResource Include="Resources\drawable\BankingBtn.png" />
+    <AndroidResource Include="Resources\drawable\BarackObama.png" />
+    <AndroidResource Include="Resources\drawable\BarCenter.png" />
+    <AndroidResource Include="Resources\drawable\BarCenter2x.png" />
+    <AndroidResource Include="Resources\drawable\BarLeft.png" />
+    <AndroidResource Include="Resources\drawable\BarLeft2x.png" />
+    <AndroidResource Include="Resources\drawable\BarPubBreweryBtn.png" />
+    <AndroidResource Include="Resources\drawable\BarRight.png" />
+    <AndroidResource Include="Resources\drawable\BarRight2x.png" />
+    <AndroidResource Include="Resources\drawable\BarsBtn.png" />
+    <AndroidResource Include="Resources\drawable\BBQBtn.png" />
+    <AndroidResource Include="Resources\drawable\BedBreakfastBtn.png" />
+    <AndroidResource Include="Resources\drawable\BiggerRadiusBtn.png" />
+    <AndroidResource Include="Resources\drawable\BikingBtn.png" />
+    <AndroidResource Include="Resources\drawable\BIRTHDAY.png" />
+    <AndroidResource Include="Resources\drawable\BlackButton.png" />
+    <AndroidResource Include="Resources\drawable\BLOG.png" />
+    <AndroidResource Include="Resources\drawable\blueblackgradient.png" />
+    <AndroidResource Include="Resources\drawable\bluegradient.png" />
+    <AndroidResource Include="Resources\drawable\BoatingBtn.png" />
+    <AndroidResource Include="Resources\drawable\BoutiqueBtn.png" />
+    <AndroidResource Include="Resources\drawable\BowlingBtn.png" />
+    <AndroidResource Include="Resources\drawable\BridalBtn.png" />
+    <AndroidResource Include="Resources\drawable\British.png" />
+    <AndroidResource Include="Resources\drawable\BritishBtn.png" />
+    <AndroidResource Include="Resources\drawable\BuffetsBtn.png" />
+    <AndroidResource Include="Resources\drawable\BurgersHotDogsBtn.png" />
+    <AndroidResource Include="Resources\drawable\BusBtn.png" />
+    <AndroidResource Include="Resources\drawable\CafeBistroBtn.png" />
+    <AndroidResource Include="Resources\drawable\CajunBtn.png" />
+    <AndroidResource Include="Resources\drawable\CampgroundBtn.png" />
+    <AndroidResource Include="Resources\drawable\CarDealerBtn.png" />
+    <AndroidResource Include="Resources\drawable\CarRentalBtn.png" />
+    <AndroidResource Include="Resources\drawable\CarWashBtn.png" />
+    <AndroidResource Include="Resources\drawable\CasinoBtn.png" />
+    <AndroidResource Include="Resources\drawable\CATERING.png" />
+    <AndroidResource Include="Resources\drawable\CateringBtn.png" />
+    <AndroidResource Include="Resources\drawable\Change_Address.png" />
+    <AndroidResource Include="Resources\drawable\ChangeAddress.png" />
+    <AndroidResource Include="Resources\drawable\ChangeLocationBtn.png" />
+    <AndroidResource Include="Resources\drawable\ChineseBtn.png" />
+    <AndroidResource Include="Resources\drawable\clipboardwhite.png" />
+    <AndroidResource Include="Resources\drawable\ClothingBtn.png" />
+    <AndroidResource Include="Resources\drawable\CLUB.png" />
+    <AndroidResource Include="Resources\drawable\CocaCola.png" />
+    <AndroidResource Include="Resources\drawable\Code_Scan.png" />
+    <AndroidResource Include="Resources\drawable\CoffeeBtn.png" />
+    <AndroidResource Include="Resources\drawable\CoffeeTeaBtn.png" />
+    <AndroidResource Include="Resources\drawable\CollegeBtn.png" />
+    <AndroidResource Include="Resources\drawable\ComedyBtn.png" />
+    <AndroidResource Include="Resources\drawable\ConcertsBtn.png" />
+    <AndroidResource Include="Resources\drawable\ConcertsTheatreBtn.png" />
+    <AndroidResource Include="Resources\drawable\ConsignmentVintageBtn.png" />
+    <AndroidResource Include="Resources\drawable\Contact_All_Access.png" />
+    <AndroidResource Include="Resources\drawable\CONTACT.png" />
+    <AndroidResource Include="Resources\drawable\ContactBtn.png" />
+    <AndroidResource Include="Resources\drawable\ContactUsBtn.png" />
+    <AndroidResource Include="Resources\drawable\CONTEST.png" />
+    <AndroidResource Include="Resources\drawable\CosmeticsBtn.png" />
+    <AndroidResource Include="Resources\drawable\crosshair.png" />
+    <AndroidResource Include="Resources\drawable\DairyQueen.png" />
+    <AndroidResource Include="Resources\drawable\DancingBtn.png" />
+    <AndroidResource Include="Resources\drawable\DancingGirlBtn.png" />
+    <AndroidResource Include="Resources\drawable\DarienLake.png" />
+    <AndroidResource Include="Resources\drawable\Dashboard.png" />
+    <AndroidResource Include="Resources\drawable\DEALS.png" />
+    <AndroidResource Include="Resources\drawable\DealsBtn.png" />
+    <AndroidResource Include="Resources\drawable\DeliSandwichesBtn.png" />
+    <AndroidResource Include="Resources\drawable\DELIVERY.png" />
+    <AndroidResource Include="Resources\drawable\DentalBtn.png" />
+    <AndroidResource Include="Resources\drawable\DessertIceCreamBtn.png" />
+    <AndroidResource Include="Resources\drawable\DessertsBtn.png" />
+    <AndroidResource Include="Resources\drawable\DinerBreakfastBtn.png" />
+    <AndroidResource Include="Resources\drawable\DinnerBell.png" />
+    <AndroidResource Include="Resources\drawable\DistilleryBtn.png" />
+    <AndroidResource Include="Resources\drawable\DoctorBtn.png" />
+    <AndroidResource Include="Resources\drawable\DonaldTrump.png" />
+    <AndroidResource Include="Resources\drawable\DONATE.png" />
+    <AndroidResource Include="Resources\drawable\Done.png" />
+    <AndroidResource Include="Resources\drawable\DrugsMedical.png" />
+    <AndroidResource Include="Resources\drawable\DrugsMedicalBtn.png" />
+    <AndroidResource Include="Resources\drawable\DrugStoreBtn.png" />
+    <AndroidResource Include="Resources\drawable\DryCleanersBtn.png" />
+    <AndroidResource Include="Resources\drawable\EDIT_BUSINESS.png" />
+    <AndroidResource Include="Resources\drawable\Edit.png" />
+    <AndroidResource Include="Resources\drawable\EducationBtn.png" />
+    <AndroidResource Include="Resources\drawable\ElectronicsBtn.png" />
+    <AndroidResource Include="Resources\drawable\EMAIL.png" />
+    <AndroidResource Include="Resources\drawable\EmailBtn.png" />
+    <AndroidResource Include="Resources\drawable\eMenuButton.png" />
+    <AndroidResource Include="Resources\drawable\EnterAddressBtn.png" />
+    <AndroidResource Include="Resources\drawable\establish.png" />
+    <AndroidResource Include="Resources\drawable\establish2x.png" />
+    <AndroidResource Include="Resources\drawable\EuropeanBtn.png" />
+    <AndroidResource Include="Resources\drawable\EVENTS.png" />
+    <AndroidResource Include="Resources\drawable\EventsBtn.png" />
+    <AndroidResource Include="Resources\drawable\EventSpaceBtn.png" />
+    <AndroidResource Include="Resources\drawable\FACEBOOK.png" />
+    <AndroidResource Include="Resources\drawable\FacebookBtn.png" />
+    <AndroidResource Include="Resources\drawable\FANS.png" />
+    <AndroidResource Include="Resources\drawable\FAQS.png" />
+    <AndroidResource Include="Resources\drawable\FastFoodBtn.png" />
+    <AndroidResource Include="Resources\drawable\FavoritesBtn.png" />
+    <AndroidResource Include="Resources\drawable\FEEDBACK.png" />
+    <AndroidResource Include="Resources\drawable\FinancialBtn.png" />
+    <AndroidResource Include="Resources\drawable\FitnessBtn.png" />
+    <AndroidResource Include="Resources\drawable\flashoff.png" />
+    <AndroidResource Include="Resources\drawable\flashon.png" />
+    <AndroidResource Include="Resources\drawable\FloristsBtn.png" />
+    <AndroidResource Include="Resources\drawable\Follow_Us.png" />
+    <AndroidResource Include="Resources\drawable\Food.png" />
+    <AndroidResource Include="Resources\drawable\FoodBtn.png" />
+    <AndroidResource Include="Resources\drawable\FoodDrinkBtn.png" />
+    <AndroidResource Include="Resources\drawable\FoodTruckBtn.png" />
+    <AndroidResource Include="Resources\drawable\FOURSQUARE.png" />
+    <AndroidResource Include="Resources\drawable\frame.png" />
+    <AndroidResource Include="Resources\drawable\FrenchBtn.png" />
+    <AndroidResource Include="Resources\drawable\Fun.png" />
+    <AndroidResource Include="Resources\drawable\FunBtn.png" />
+    <AndroidResource Include="Resources\drawable\FUNDRAISING.png" />
+    <AndroidResource Include="Resources\drawable\FunNightlifeBtn.png" />
+    <AndroidResource Include="Resources\drawable\GamesBtn.png" />
+    <AndroidResource Include="Resources\drawable\GasBtn.png" />
+    <AndroidResource Include="Resources\drawable\GermanBtn.png" />
+    <AndroidResource Include="Resources\drawable\GIFTCARDS.png" />
+    <AndroidResource Include="Resources\drawable\GiftsBtn.png" />
+    <AndroidResource Include="Resources\drawable\GoKartsBtn.png" />
+    <AndroidResource Include="Resources\drawable\GolfBtn.png" />
+    <AndroidResource Include="Resources\drawable\GOOGLE_plus.png" />
+    <AndroidResource Include="Resources\drawable\GOOGLEPLUS.png" />
+    <AndroidResource Include="Resources\drawable\GourmetOrganicBtn.png" />
+    <AndroidResource Include="Resources\drawable\GPSbutton.png" />
+    <AndroidResource Include="Resources\drawable\grabbing.png" />
+    <AndroidResource Include="Resources\drawable\GreekBtn.png" />
+    <AndroidResource Include="Resources\drawable\GreekMediterraneanBtn.png" />
+    <AndroidResource Include="Resources\drawable\greenbg.png" />
+    <AndroidResource Include="Resources\drawable\greenbutton.png" />
+    <AndroidResource Include="Resources\drawable\GreenCircle.png" />
+    <AndroidResource Include="Resources\drawable\GreenSign320gradient.png" />
+    <AndroidResource Include="Resources\drawable\GreenSign768gradient.png" />
+    <AndroidResource Include="Resources\drawable\GroceryBtn.png" />
+    <AndroidResource Include="Resources\drawable\HairSalonBtn.png" />
+    <AndroidResource Include="Resources\drawable\HardwareBtn.png" />
+    <AndroidResource Include="Resources\drawable\Health.png" />
+    <AndroidResource Include="Resources\drawable\HealthBtn.png" />
+    <AndroidResource Include="Resources\drawable\HealthFoodBtn.png" />
+    <AndroidResource Include="Resources\drawable\HealthPurple.png" />
+    <AndroidResource Include="Resources\drawable\HealthServicesBtn.png" />
+    <AndroidResource Include="Resources\drawable\HeatingAC.png" />
+    <AndroidResource Include="Resources\drawable\HeatingAC3.png" />
+    <AndroidResource Include="Resources\drawable\HeatingAC4.png" />
+    <AndroidResource Include="Resources\drawable\HeatingACBtn.png" />
+    <AndroidResource Include="Resources\drawable\HelendaleDermatology.png" />
+    <AndroidResource Include="Resources\drawable\Help.png" />
+    <AndroidResource Include="Resources\drawable\history.png" />
+    <AndroidResource Include="Resources\drawable\HistoryBtn.png" />
+    <AndroidResource Include="Resources\drawable\HomeBtn.png" />
+    <AndroidResource Include="Resources\drawable\HomeButton.png" />
+    <AndroidResource Include="Resources\drawable\HomeImprovementBtn.png" />
+    <AndroidResource Include="Resources\drawable\HomeServicesBtn.png" />
+    <AndroidResource Include="Resources\drawable\HospitalBtn.png" />
+    <AndroidResource Include="Resources\drawable\HotelBtn.png" />
+    <AndroidResource Include="Resources\drawable\HOURS.png" />
+    <AndroidResource Include="Resources\drawable\IndianBtn.png" />
+    <AndroidResource Include="Resources\drawable\INSTAGRAM.png" />
+    <AndroidResource Include="Resources\drawable\IrishBtn.png" />
+    <AndroidResource Include="Resources\drawable\ItalianBtn.png" />
+    <AndroidResource Include="Resources\drawable\JapaneseBtn.png" />
+    <AndroidResource Include="Resources\drawable\JewelryBtn.png" />
+    <AndroidResource Include="Resources\drawable\JOBS.png" />
+    <AndroidResource Include="Resources\drawable\JuiceBarBtn.png" />
+    <AndroidResource Include="Resources\drawable\K_12Btnn.png" />
+    <AndroidResource Include="Resources\drawable\KoreanBtn.png" />
+    <AndroidResource Include="Resources\drawable\KosherBtn.png" />
+    <AndroidResource Include="Resources\drawable\LegalFinancialBtn.png" />
+    <AndroidResource Include="Resources\drawable\LingerieBtn.png" />
+    <AndroidResource Include="Resources\drawable\LINKEDIN.png" />
+    <AndroidResource Include="Resources\drawable\LiquorBtn.png" />
+    <AndroidResource Include="Resources\drawable\LISTINGS.png" />
+    <AndroidResource Include="Resources\drawable\LocationBtn.png" />
+    <AndroidResource Include="Resources\drawable\LocksmithBtn.png" />
+    <AndroidResource Include="Resources\drawable\login.png" />
+    <AndroidResource Include="Resources\drawable\Logo_Launcher.png" />
+    <AndroidResource Include="Resources\drawable\LogoGrab.png" />
+    <AndroidResource Include="Resources\drawable\LogoLauncher.png" />
+    <AndroidResource Include="Resources\drawable\Main_iPad.storyboard" />
+    <AndroidResource Include="Resources\drawable\Main_iPhone.storyboard" />
+    <AndroidResource Include="Resources\drawable\MAINTENANCE.png" />
+    <AndroidResource Include="Resources\drawable\MallBtn.png" />
+    <AndroidResource Include="Resources\drawable\MAP.png" />
+    <AndroidResource Include="Resources\drawable\MapBtn.png" />
+    <AndroidResource Include="Resources\drawable\MarkCuban.png" />
+    <AndroidResource Include="Resources\drawable\MEALS.png" />
+    <AndroidResource Include="Resources\drawable\MealsBtn.png" />
+    <AndroidResource Include="Resources\drawable\MedicalBtn.png" />
+    <AndroidResource Include="Resources\drawable\MedicalSupplyCenterBtn.png" />
+    <AndroidResource Include="Resources\drawable\MediterraneanBtn.png" />
+    <AndroidResource Include="Resources\drawable\MensClothingBtn.png" />
+    <AndroidResource Include="Resources\drawable\MENU.png" />
+    <AndroidResource Include="Resources\drawable\MenuBtn.png" />
+    <AndroidResource Include="Resources\drawable\MenuButton.png" />
+    <AndroidResource Include="Resources\drawable\MexicanBtn.png" />
+    <AndroidResource Include="Resources\drawable\MiniGolfBtn.png" />
+    <AndroidResource Include="Resources\drawable\minusfive.png" />
+    <AndroidResource Include="Resources\drawable\MobileBtn.png" />
+    <AndroidResource Include="Resources\drawable\MotorcycleBtn.png" />
+    <AndroidResource Include="Resources\drawable\MovieBtn.png" />
+    <AndroidResource Include="Resources\drawable\MuseumBtn.png" />
+    <AndroidResource Include="Resources\drawable\MusicBtn.png" />
+    <AndroidResource Include="Resources\drawable\MusicShopBtn.png" />
+    <AndroidResource Include="Resources\drawable\MY_SPECIAL_DAYS.png" />
+    <AndroidResource Include="Resources\drawable\MyAllAccess.png" />
+    <AndroidResource Include="Resources\drawable\MyAllAccessIcon.png" />
+    <AndroidResource Include="Resources\drawable\MyFavoritesBtn.png" />
+    <AndroidResource Include="Resources\drawable\MYSPECIALDAYS.png" />
+    <AndroidResource Include="Resources\drawable\MySpecialDaysBtn.png" />
+    <AndroidResource Include="Resources\drawable\NailSalonBtn.png" />
+    <AndroidResource Include="Resources\drawable\NameButton.png" />
+    <AndroidResource Include="Resources\drawable\NameSearchBtn.png" />
+    <AndroidResource Include="Resources\drawable\NEWS.png" />
+    <AndroidResource Include="Resources\drawable\Newspaper.png" />
+    <AndroidResource Include="Resources\drawable\Next.png" />
+    <AndroidResource Include="Resources\drawable\NightclubBtn.png" />
+    <AndroidResource Include="Resources\drawable\NightlifeBtn.png" />
+    <AndroidResource Include="Resources\drawable\No.png" />
+    <AndroidResource Include="Resources\drawable\NoSpeak.png" />
+    <AndroidResource Include="Resources\drawable\NUTRITION.png" />
+    <AndroidResource Include="Resources\drawable\oldREVEAL.png" />
+    <AndroidResource Include="Resources\drawable\oldREVEALADEAL.png" />
+    <AndroidResource Include="Resources\drawable\Open.png" />
+    <AndroidResource Include="Resources\drawable\OpenBrowser.png" />
+    <AndroidResource Include="Resources\drawable\OpticalBtn.png" />
+    <AndroidResource Include="Resources\drawable\Options.png" />
+    <AndroidResource Include="Resources\drawable\ORDER.png" />
+    <AndroidResource Include="Resources\drawable\ParkingBtn.png" />
+    <AndroidResource Include="Resources\drawable\PawnShopBtn.png" />
+    <AndroidResource Include="Resources\drawable\PerformingArtsBtn.png" />
+    <AndroidResource Include="Resources\drawable\PetsBtn.png" />
+    <AndroidResource Include="Resources\drawable\PharmacyBtn.png" />
+    <AndroidResource Include="Resources\drawable\PHONE.png" />
+    <AndroidResource Include="Resources\drawable\PhotoBtn.png" />
+    <AndroidResource Include="Resources\drawable\PhotoNeeded.png" />
+    <AndroidResource Include="Resources\drawable\PhotoNeededNoBox.png" />
+    <AndroidResource Include="Resources\drawable\PHOTOS.png" />
+    <AndroidResource Include="Resources\drawable\PiercingBtn.png" />
+    <AndroidResource Include="Resources\drawable\PINTEREST.png" />
+    <AndroidResource Include="Resources\drawable\PizzaBtn.png" />
+    <AndroidResource Include="Resources\drawable\PlaygroundBtn.png" />
+    <AndroidResource Include="Resources\drawable\PlumbingBtn.png" />
+    <AndroidResource Include="Resources\drawable\plusfive.png" />
+    <AndroidResource Include="Resources\drawable\Porsche.png" />
+    <AndroidResource Include="Resources\drawable\poweredbyfoursquare.png" />
+    <AndroidResource Include="Resources\drawable\poweredByFoursquare_16x16.png" />
+    <AndroidResource Include="Resources\drawable\poweredByFoursquare_36x36.png" />
+    <AndroidResource Include="Resources\drawable\poweredByFoursquare_gray.png" />
+    <AndroidResource Include="Resources\drawable\poweredByFoursquare_white.png" />
+    <AndroidResource Include="Resources\drawable\poweredbylocu.png" />
+    <AndroidResource Include="Resources\drawable\PrintShopBtn.png" />
+    <AndroidResource Include="Resources\drawable\QR1.png" />
+    <AndroidResource Include="Resources\drawable\QR2.png" />
+    <AndroidResource Include="Resources\drawable\QR3.png" />
+    <AndroidResource Include="Resources\drawable\QR4.png" />
+    <AndroidResource Include="Resources\drawable\QRbutton.png" />
+    <AndroidResource Include="Resources\drawable\QRcodebutton.png" />
+    <AndroidResource Include="Resources\drawable\RacingBtn.png" />
+    <AndroidResource Include="Resources\drawable\RadarImage.png" />
+    <AndroidResource Include="Resources\drawable\RadarSymbol.psd" />
+    <AndroidResource Include="Resources\drawable\RATES.png" />
+    <AndroidResource Include="Resources\drawable\RealEstateBtn.png" />
+    <AndroidResource Include="Resources\drawable\RECIPES.png" />
+    <AndroidResource Include="Resources\drawable\RedBar.png" />
+    <AndroidResource Include="Resources\drawable\REPAIR.png" />
+    <AndroidResource Include="Resources\drawable\RepairBtn.png" />
+    <AndroidResource Include="Resources\drawable\REPLACE.png" />
+    <AndroidResource Include="Resources\drawable\RESERVATIONS.png" />
+    <AndroidResource Include="Resources\drawable\RESERVE.png" />
+    <AndroidResource Include="Resources\drawable\RestaurantsBtn.png" />
+    <AndroidResource Include="Resources\drawable\REVEAL_A_DEAL.png" />
+    <AndroidResource Include="Resources\drawable\RevealButton.png" />
+    <AndroidResource Include="Resources\drawable\Review_App.png" />
+    <AndroidResource Include="Resources\drawable\ReviewAppBtn.png" />
+    <AndroidResource Include="Resources\drawable\ReviewPencil.png" />
+    <AndroidResource Include="Resources\drawable\REWARDS.png" />
+    <AndroidResource Include="Resources\drawable\RoundedFrame.png" />
+    <AndroidResource Include="Resources\drawable\RoundedFrameNew.png" />
+    <AndroidResource Include="Resources\drawable\SaladBtn.png" />
+    <AndroidResource Include="Resources\drawable\SalonBtn.png" />
+    <AndroidResource Include="Resources\drawable\SandwichesBtn.png" />
+    <AndroidResource Include="Resources\drawable\Scan_Code.png" />
+    <AndroidResource Include="Resources\drawable\Scan.png" />
+    <AndroidResource Include="Resources\drawable\ScanButton.png" />
+    <AndroidResource Include="Resources\drawable\ScanCodesBtn.png" />
+    <AndroidResource Include="Resources\drawable\ScanKeyhole.png" />
+    <AndroidResource Include="Resources\drawable\ScanKeyholeBlue.png" />
+    <AndroidResource Include="Resources\drawable\ScanSpot.png" />
+    <AndroidResource Include="Resources\drawable\SchoolsBtn.png" />
+    <AndroidResource Include="Resources\drawable\SeafoodBtn.png" />
+    <AndroidResource Include="Resources\drawable\Search_Nearby.png" />
+    <AndroidResource Include="Resources\drawable\Search_Radius.png" />
+    <AndroidResource Include="Resources\drawable\Search.png" />
+    <AndroidResource Include="Resources\drawable\searchbyname.png" />
+    <AndroidResource Include="Resources\drawable\searchradius.png" />
+    <AndroidResource Include="Resources\drawable\Selected.png" />
+    <AndroidResource Include="Resources\drawable\SERVICE.png" />
+    <AndroidResource Include="Resources\drawable\ServicesBtn.png" />
+    <AndroidResource Include="Resources\drawable\Settings.png" />
+    <AndroidResource Include="Resources\drawable\SettingsBtn.png" />
+    <AndroidResource Include="Resources\drawable\ShoesBtn.png" />
+    <AndroidResource Include="Resources\drawable\SHOP.png" />
+    <AndroidResource Include="Resources\drawable\SHOPCART.png" />
+    <AndroidResource Include="Resources\drawable\SHOPPING.png" />
+    <AndroidResource Include="Resources\drawable\ShoppingBtn.png" />
+    <AndroidResource Include="Resources\drawable\SkatingBtn.png" />
+    <AndroidResource Include="Resources\drawable\SkiingBtn.png" />
+    <AndroidResource Include="Resources\drawable\SKYPE.png" />
+    <AndroidResource Include="Resources\drawable\slowalert.png" />
+    <AndroidResource Include="Resources\drawable\slowalert2x.png" />
+    <AndroidResource Include="Resources\drawable\SmallerRadiusBtn.png" />
+    <AndroidResource Include="Resources\drawable\SoupBtn.png" />
+    <AndroidResource Include="Resources\drawable\SouthernBtn.png" />
+    <AndroidResource Include="Resources\drawable\SpaBtn.png" />
+    <AndroidResource Include="Resources\drawable\SpanishBtn.png" />
+    <AndroidResource Include="Resources\drawable\Speak.png" />
+    <AndroidResource Include="Resources\drawable\SPECIALS.png" />
+    <AndroidResource Include="Resources\drawable\SpiritualBtn.png" />
+    <AndroidResource Include="Resources\drawable\SportingGoodsBtn.png" />
+    <AndroidResource Include="Resources\drawable\SportsBtn.png" />
+    <AndroidResource Include="Resources\drawable\SPOTdashboard.png" />
+    <AndroidResource Include="Resources\drawable\Starbucks.png" />
+    <AndroidResource Include="Resources\drawable\StartButton.png" />
+    <AndroidResource Include="Resources\drawable\SteakhouseBtn.png" />
+    <AndroidResource Include="Resources\drawable\STORE.png" />
+    <AndroidResource Include="Resources\drawable\Submit_Logo.png" />
+    <AndroidResource Include="Resources\drawable\Submit_Photo.png" />
+    <AndroidResource Include="Resources\drawable\SubmitLogo.png" />
+    <AndroidResource Include="Resources\drawable\SubmitPhoto.png" />
+    <AndroidResource Include="Resources\drawable\SubsBtn.png" />
+    <AndroidResource Include="Resources\drawable\Subway.png" />
+    <AndroidResource Include="Resources\drawable\SubwayBtn.png" />
+    <AndroidResource Include="Resources\drawable\SURVEY.png" />
+    <AndroidResource Include="Resources\drawable\TABLE.png" />
+    <AndroidResource Include="Resources\drawable\TailorBtn.png" />
+    <AndroidResource Include="Resources\drawable\TalkingRingtones.png" />
+    <AndroidResource Include="Resources\drawable\TalkingSoundboard.png" />
+    <AndroidResource Include="Resources\drawable\TanningBtn.png" />
+    <AndroidResource Include="Resources\drawable\TattooBtn.png" />
+    <AndroidResource Include="Resources\drawable\TattooPiercingBtn.png" />
+    <AndroidResource Include="Resources\drawable\TaxiBtn.png" />
+    <AndroidResource Include="Resources\drawable\TaxiLimoBtn.png" />
+    <AndroidResource Include="Resources\drawable\TEAM.png" />
+    <AndroidResource Include="Resources\drawable\Thai.png" />
+    <AndroidResource Include="Resources\drawable\ThaiBtn.png" />
+    <AndroidResource Include="Resources\drawable\TheatreBtn.png" />
+    <AndroidResource Include="Resources\drawable\ThemeParkBtn.png" />
+    <AndroidResource Include="Resources\drawable\TICKETS.png" />
+    <AndroidResource Include="Resources\drawable\ToysBtn.png" />
+    <AndroidResource Include="Resources\drawable\TRACKER.png" />
+    <AndroidResource Include="Resources\drawable\TrainBtn.png" />
+    <AndroidResource Include="Resources\drawable\Travel.png" />
+    <AndroidResource Include="Resources\drawable\TravelAgencyBtn.png" />
+    <AndroidResource Include="Resources\drawable\TravelBtn.png" />
+    <AndroidResource Include="Resources\drawable\TutorTrade_SchoolBtn.png" />
+    <AndroidResource Include="Resources\drawable\TutorTradeschoolBtn.png" />
+    <AndroidResource Include="Resources\drawable\TWITTER.png" />
+    <AndroidResource Include="Resources\drawable\TwitterBtn.png" />
+    <AndroidResource Include="Resources\drawable\TypeNameButton.png" />
+    <AndroidResource Include="Resources\drawable\UKBtn.png" />
+    <AndroidResource Include="Resources\drawable\UseGPSBtn.png" />
+    <AndroidResource Include="Resources\drawable\VeganBtn.png" />
+    <AndroidResource Include="Resources\drawable\VegetarianBtn.png" />
+    <AndroidResource Include="Resources\drawable\VIDEOS.png" />
+    <AndroidResource Include="Resources\drawable\Vietnamese.png" />
+    <AndroidResource Include="Resources\drawable\VietnameseBtn.png" />
+    <AndroidResource Include="Resources\drawable\VineyardsBtn.png" />
+    <AndroidResource Include="Resources\drawable\VintageBtn.png" />
+    <AndroidResource Include="Resources\drawable\Warning.png" />
+    <AndroidResource Include="Resources\drawable\WEATHER.png" />
+    <AndroidResource Include="Resources\drawable\WEB.png" />
+    <AndroidResource Include="Resources\drawable\WebBtn.png" />
+    <AndroidResource Include="Resources\drawable\WEBCAM.png" />
+    <AndroidResource Include="Resources\drawable\WEBSITE.png" />
+    <AndroidResource Include="Resources\drawable\WeddingBtn.png" />
+    <AndroidResource Include="Resources\drawable\WhiteBorder.png" />
+    <AndroidResource Include="Resources\drawable\WhiteRoundedRectangle.png" />
+    <AndroidResource Include="Resources\drawable\WineBtn.png" />
+    <AndroidResource Include="Resources\drawable\WingsBtn.png" />
+    <AndroidResource Include="Resources\drawable\WomensClothingBtn.png" />
+    <AndroidResource Include="Resources\drawable\Yankees.png" />
+    <AndroidResource Include="Resources\drawable\YELP.png" />
+    <AndroidResource Include="Resources\drawable\Yes.png" />
+    <AndroidResource Include="Resources\drawable\YOUTUBE.png" />
+    <AndroidResource Include="Resources\drawable\ZooBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\drawable-xxxhdpi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AllAccess\AllAccess.csproj">
+      <Project>{8FCEE30B-CD16-4112-A68E-24120EAC1B7B}</Project>
+      <Name>AllAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>
