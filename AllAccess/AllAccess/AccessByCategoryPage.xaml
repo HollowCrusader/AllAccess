@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:GradientPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:controls="clr-namespace:AllAccess.Controls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAccess.AccessByCategoryPage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="false"
+                       StartColor="#002a6d"
+                       EndColor="Black">
+    <StackLayout>
+         <Frame CornerRadius="5" Padding="2">
+                <StackLayout BackgroundColor="#013301" Orientation="Horizontal" Margin="5">
+                    <Image x:Name="back" Source="Back.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" Margin="5,0,0,0"/>
+                    <Label Text = "AllAccess.US" TextColor="White"  HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold"/>
+                    <Image Source="SettingsBtn.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,0,5,0"/>
+                </StackLayout>
+            </Frame>
+    <ScrollView>
+        <StackLayout BackgroundColor="Transparent">
+            <!--<Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+           </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>-->
+            <FlexLayout Margin="30, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Image x:Name="autoTravelBtn" Source="AutoTravelBtn.png" WidthRequest="130" HeightRequest="130"/>
+                        <Label Text="Auto &amp; Travel" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Margin="10,0,0,0">
+                        <Image x:Name="foodBtn" Source="FoodDrinkBtn.png" HorizontalOptions="Center" WidthRequest="130" HeightRequest="130" Margin="20,0,0,0"/>
+                        <Label Text="FOOD &amp; DRINK" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+            </FlexLayout>
+                <FlexLayout Margin="30, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                        <Image x:Name="funBtn" Source="Fun.png" WidthRequest="130" HeightRequest="130"/>
+                        <Label Text="FUN &amp; NIGHTLIFE" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Margin="10,0,0,0">
+                        <Image x:Name="healthBtn" Source="HealthServicesBtn.png" WidthRequest="130" HeightRequest="130"/>
+                        <Label TextColor="White" Text="HEALTH &amp; SERVICES" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+            </FlexLayout>
+                <FlexLayout Margin="30, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                        <Image x:Name="shopping" Source="SHOP.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="SHOPPING" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Margin="10,0,0,0">
+                        <Image x:Name="wedding" Source="WeddingBtn.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="WEDDING" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+            </FlexLayout>
+                <FlexLayout Margin="30, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                        <Image Source="AccessMeCircle.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="BACK TO SCANNING" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Margin="10,0,0,0">
+                        <Image Source="FavoritesBtn.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="FAVORITES" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+            </FlexLayout>
+           <!-- <FlexLayout>
+                <StackLayout>
+                    <Image Source="AddBusinessBtn.png"/>
+                    <Label Text="ADD BUSINESS" TextColor="White" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="AllAccessBtn.png"/>
+                    <Label Text="ALLACCESS" TextColor="White" HorizontalOptions="Center"/>
+                </StackLayout>
+            </FlexLayout>-->
+                <FlexLayout Margin="30, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                        <Image x:Name="twitterButton"  Source="TWITTER.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="TWITTER" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Margin="10,0,0,0">
+                        <Image x:Name="facebookButton" Source="FacebookBtn.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="FACEBOOK" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+            </FlexLayout>
+                <FlexLayout Margin="30, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                        <Image Source="ReviewAppBtn.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="REVIEW APP" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                </StackLayout>
+                <StackLayout Margin="10,0,0,0">
+                        <Image Source="CONTACT.png" WidthRequest="130" HeightRequest="130"/>
+                        <Label Text="CONTACT US" TextColor="White" HorizontalOptions="Center" FontSize="Medium"/>
+                    </StackLayout>
+            </FlexLayout>
+        </StackLayout>
+    </ScrollView>
+        </StackLayout>
+</controls:GradientPage>

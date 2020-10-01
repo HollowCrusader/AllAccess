@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:GradientPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:controls="clr-namespace:AllAccess.Controls"
+             xmlns:viewmodels="clr-namespace:AllAccess.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAccess.AutoandTravelPage"
+                       NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="false"
+                       StartColor="#002a6d"
+                       EndColor="Black">
+    <controls:GradientPage.BindingContext>
+        <viewmodels:SearchViewModel/>
+    </controls:GradientPage.BindingContext>
+
+    <StackLayout>
+		<Frame CornerRadius="5" Padding="2">
+			<StackLayout BackgroundColor="#013301" Orientation="Horizontal" Margin="5">
+				<Image x:Name="back" Source="Back.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" Margin="5,0,0,0"/>
+				<Label Text ="Auto and Travel" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold"/>
+				<Image x:Name="help" Source="SettingsBtn.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,0,5,0"/>
+			</StackLayout>
+		</Frame>
+		<ScrollView>
+        <StackLayout BackgroundColor="Transparent">
+          
+            <!--<Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+           </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>-->
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="autoShopBtn" Source="AutoShopBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                            <Label x:Name="autoShopLabel" Text="Auto Shop" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="bedBreakBtn" Source="BedBreakfastBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="bedLabel" Text="Bed and Breakfast" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="bikingBtn" Source="BikingBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="bikingLabel" Text="Biking" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                
+                <StackLayout>
+                    <Image x:Name="boatingBtn" Source="BoatingBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="boatingLabel" TextColor="White" Text="Boating" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="busBtn" Source="BusBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="busLabel" Text="Bus" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="campBtn" Source="CampgroundBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="campLabel" Text="Campground" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="carDealerBtn" Source="CarDealerBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="carDealerLabel" Text="Car Dealer" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="carRentalBtn" Source="CarRentalBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="carRentalLabel" Text="Car Rental" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                <Image x:Name="carWashBtn" Source="CarWashBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="carWashLabel" Text="Car Wash" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+        </FlexLayout>
+                <FlexLayout> <!--10th-->
+                    <StackLayout>
+                    <Image x:Name="gasBtn" Source="GasBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="gasLabel" Text="Gas" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="hotelBtn" Source="HotelBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="hotelLabel" Text="Hotel" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                    <StackLayout>
+                        <Image x:Name="lockBtn" Source="LocksmithBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="lockLabel" Text="Locksmith" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                </FlexLayout>
+            <FlexLayout>
+                
+                <StackLayout>
+                    <Image x:Name="motorcycleBtn" Source="MotorcycleBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="motorcycleLabel" Text="Motorcycle" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="parkingBtn" Source="ParkingBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="parkingLabel" Text="Parking" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                    <StackLayout>
+                        <Image x:Name="realEstateBtn" Source="RealEstateBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="realEstateLabel" Text="Real Estate" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+                </FlexLayout>
+            <FlexLayout>
+                
+                <StackLayout>
+                    <Image x:Name="subwayBtn" Source="SubwayBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="subwayLabel" Text="Subway" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="taxiBtn" Source="TaxiLimoBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="taxiLabel" Text="Taxi and Limo" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                    <StackLayout>
+                        <Image x:Name="trainBtn" Source="TrainBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="trainLabel" Text="Train" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+
+                </FlexLayout>
+            <FlexLayout>
+                
+                <StackLayout>
+                    <Image x:Name="travelBtn" Source="TravelAgencyBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="travelLabel"  Text="Travel Agency" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+        </StackLayout>
+    </ScrollView>
+    </StackLayout>
+</controls:GradientPage>

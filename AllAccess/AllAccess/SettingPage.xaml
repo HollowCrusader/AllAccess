@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:GradientPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:controls="clr-namespace:AllAccess.Controls"
+					   xmlns:viewmodel="clr-namespace:AllAccess.ViewModels"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAccess.SettingPage"
+                       NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="false"
+                       StartColor="#002a6d"
+                       EndColor="Black">
+	<controls:GradientPage.BindingContext>
+		<viewmodel:LocationViewModel/>
+	</controls:GradientPage.BindingContext>
+                       
+    <StackLayout>
+         <Frame CornerRadius="5" Padding="2">
+                        <StackLayout BackgroundColor="#013301" Orientation="Horizontal" Margin="5">
+                            <Image x:Name="back" Source="Back.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" Margin="5,0,0,0"/>
+                            <Label Text ="AllAccess.US" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold"/>
+                            <Image x:Name="help" Source="Help.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,0,5,0"/>
+                        </StackLayout>
+                    </Frame>
+        <Label x:Name="radiusLabel" Text="{Binding Display, Mode=TwoWay}" TextColor="White" VerticalOptions="Start" FontSize="Medium" HorizontalOptions="Center"/>
+        <StackLayout Orientation="Horizontal" Margin="5,10,5,10">
+            <StackLayout>
+            <!--<Button x:Name="gpsButton"/>-->
+                <Image x:Name="gps" Source="GPSbutton.png" HeightRequest="75" WidthRequest="75"/>
+                <Label Text="Use GPS" TextColor="White"/>
+            </StackLayout>
+            <StackLayout>
+                <Image x:Name="address" Source="AddressButton.png" HeightRequest="75" WidthRequest="75"/>
+                <Label Text="Enter &#10; Address" TextColor="White"/>
+            </StackLayout>
+            <StackLayout>
+                <Image x:Name="smallRadius" Source="SmallerRadiusBtn.png" HeightRequest="75" WidthRequest="75"/>
+                <Label Text="Smaller &#10; Radius" TextColor="White"/>
+            </StackLayout>
+            <StackLayout>
+                <Image x:Name="biggerRadius" Source="BiggerRadiusBtn.png" HeightRequest="75" WidthRequest="75"/>
+                <Label Text="Bigger &#10; Radius" TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+         <StackLayout Orientation="Horizontal">
+                <Button x:Name="TalkingOff" Text="Talking Hints Off" TextColor="White" BackgroundColor="Navy" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="TalkingOn" Text="Talking Hints On" TextColor="White" BackgroundColor="Navy" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+    </StackLayout>
+</controls:GradientPage>

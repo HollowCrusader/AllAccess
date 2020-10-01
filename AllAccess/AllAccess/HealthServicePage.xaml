@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:GradientPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:controls="clr-namespace:AllAccess.Controls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAccess.HealthServicePage"
+					    NavigationPage.HasBackButton="False"
+					   NavigationPage.HasNavigationBar="False"
+                       StartColor="#002a6d"
+                       EndColor="Black">
+    <StackLayout>
+        <Frame CornerRadius="5" Padding="2">
+                <StackLayout BackgroundColor="#013301" Orientation="Horizontal" Margin="5">
+                    <Image x:Name="back" Source="Back.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" Margin="5,0,0,0"/>
+                    <Label Text = "Health and Services" TextColor="White"  HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold"/>
+                    <Image x:Name="help" Source="SettingsBtn.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,0,5,0"/>
+                </StackLayout>
+            </Frame>
+    <ScrollView>
+        <StackLayout BackgroundColor="Transparent">
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="atmBtn" Source="ATMBankingBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="atmLabel" Text="Atm and Banking" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="cateringBtn" Source="CateringBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="cateringLabel" Text="Catering" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="collegeBtn" Source="CollegeBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="collegeLabel" Text="College" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+
+                <StackLayout>
+                        <Image x:Name="cosmeticsBtn" Source="CosmeticsBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="cosmeticsLabel" TextColor="White" Text="Cosmetics" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="dentalBtn" Source="DentalBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="dentalLabel" Text="Dental" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="doctorBtn" Source="DoctorBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="doctorLabel" Text="Doctor" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="dryCleanerBtn" Source="DryCleanersBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="dryCleaningLabel" Text="Dry Cleaning" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="eventBtn" Source="EventSpaceBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="eventLabel" Text="Event Space" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="fitnessBtn" Source="FitnessBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="fitnessLabel" Text="Fitness" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="heatBtn" Source="HeatingAC.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="heatLabel" Text="Heating and AC" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="homeBtn" Source="HomeBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="homeLabel" Text="Home and Services" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="hospitalBtn"  Source="HospitalBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="hospitalLabel" Text="Hospital" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="kBtn" Source="K_12Btnn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="kLabel" Text="K-12" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="legalBtn" Source="LegalFinancialBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="legalLabel" Text="Legal and Financial" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="locksmithBtn" Source="LocksmithBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="locksmithLabel" Text="Locksmith" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="medicalBtn" Source="MedicalSupplyCenterBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="medicalLabel" Text="Medical Supply and Center" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="opticalBtn" Source="OpticalBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="opticalLabel" Text="Optical" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="photoBtn" Source="PhotoBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="photoLabel" Text="Photo" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="petsBtn" Source="PetsBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="petsLabel" Text="Pets" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="plumbingBtn" Source="PlumbingBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="plumbingLabel" Text="Plumbing" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="pharmacyBtn" Source="PharmacyBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="pharmacyLabel" Text="Pharmacy" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="printShopBtn" Source="PrintShopBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="printShopLabel" Text="Print Shop" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="realEstateBtn" Source="RealEstateBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="realEstateLabel" Text="Real Estate" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="salonBtn" Source="SalonBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="salonLabel" Text="Salon" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="spaBtn" Source="SpaBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="spaLabel" Text="Spa" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="spiritBtn" Source="SpiritualBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="spiritLabel"  Text="Spiritual" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="tailorBtn" Source="TailorBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="tailorLabel" Text="Tailor" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                        <Image x:Name="tanningBtn" Source="TanningBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="tanningLabel" Text="Tanning" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="tattoBtn" Source="TattooPiercingBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="tattoLabel" Text="Tattoo and Piercing" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                        <Image x:Name="tutorBtn" Source="TutorTrade_SchoolBtn.png">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetSearchCommand}"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
+                        <Label x:Name="tutorLabel" Text="Tutor and Trade School" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+        </StackLayout>
+    </ScrollView>
+    </StackLayout>
+</controls:GradientPage>

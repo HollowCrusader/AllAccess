@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAccess.WeddingPage"
+			  NavigationPage.HasBackButton="False"
+					   NavigationPage.HasNavigationBar="False">
+             <StackLayout>
+         <Frame CornerRadius="5" Padding="2">
+                <StackLayout BackgroundColor="#013301" Orientation="Horizontal" Margin="5">
+                    <Image x:Name="back" Source="Back.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" Margin="5,0,0,0"/>
+                    <Label Text = "Wedding" TextColor="White"  HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold"/>
+                    <Image Source="SettingsBtn.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,0,5,0"/>
+                </StackLayout>
+            </Frame>
+    <ScrollView>
+        <StackLayout BackgroundColor="#002a6d">
+            <!--<Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+           </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>-->
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="bake" Source="BakeriesBtn.png"/>
+                    <Label x:Name="bakeLabel" Text="Bakeries" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="bed" Source="BedBreakfastBtn.png"/>
+                    <Label x:Name="bedLabel" Text="Bed and Breakfest" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="boat" Source="BoatingBtn.png"/>
+                    <Label x:Name="boatLabel" Text="Boating" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+
+                <StackLayout>
+                    <Image x:Name="boutique" Source="BoutiqueBtn.png"/>
+                    <Label x:Name="boutiqueLabel" TextColor="White" Text="Boutique" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="bridal" Source="BridalBtn.png"/>
+                    <Label x:Name="bridalLabel" Text="Bridal" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="carRental" Source="CarRentalBtn.png"/>
+                    <Label x:Name="carLabel" Text="Car Rental" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="catering" Source="CateringBtn.png"/>
+                    <Label x:Name="caterLabel" Text="Catering" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="clothing" Source="ClothingBtn.png"/>
+                    <Label x:Name="clothLabel" Text="Clothing" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="cosign" Source="ConsignmentVintageBtn.png"/>
+                    <Label x:Name="cosignLabel" Text="Consignment and Vintage" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="cosmetic" Source="CosmeticsBtn.png"/>
+                    <Label x:Name="cosmeticLabel" Text="Cosmetics" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="dental" Source="DentalBtn.png"/>
+                    <Label x:Name="dentalLabel" Text="Dental" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="dryCleaner" Source="DryCleanersBtn.png"/>
+                    <Label x:Name="dryLabel" Text="Dry Cleaners" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="space" Source="EventSpaceBtn.png"/>
+                    <Label x:Name="spaceLabel" Text="Event Space" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="florist" Source="FloristsBtn.png"/>
+                    <Label x:Name="floristLabel" Text="Florists" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="gift" Source="GiftsBtn.png"/>
+                    <Label x:Name="giftLabel" Text="Gifts" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="hotel" Source="HotelBtn.png"/>
+                    <Label x:Name="hotelLabel" Text="Hotel" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="jewelry" Source="JewelryBtn.png"/>
+                    <Label x:Name="jewelryLabel" Text="Jewerly" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="legal" Source="LegalFinancialBtn.png"/>
+                    <Label x:Name="legalLabel" Text="Legal and Financial" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="linger" Source="LingerieBtn.png"/>
+                    <Label x:Name="lingerLabel" Text="Lingerie" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="liquor" Source="LiquorBtn.png"/>
+                    <Label x:Name="liquorLabel" Text="Liquor" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="men" Source="MensClothingBtn.png"/>
+                    <Label x:Name="menLabel" Text="Men's Clothing" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="music" Source="MusicBtn.png"/>
+                    <Label x:Name="musicLabel" Text="Music" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="photo" Source="PhotoBtn.png"/>
+                    <Label x:Name="photoLabel" Text="Photo" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="salon" Source="SalonBtn.png"/>
+                    <Label x:Name="salonLabel" Text="Salon" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="shoes" Source="ShoesBtn.png"/>
+                    <Label x:Name="shoesLabel" Text="Shoes" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="spa" Source="SpaBtn.png"/>
+                    <Label x:Name="spaLabel" Text="Spa" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="spiritual" Source="SpiritualBtn.png"/>
+                    <Label x:Name="spiritualLabel" Text="Spiritual" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="tailor" Source="TailorBtn.png"/>
+                    <Label x:Name="tailorLabel" Text="Tailor" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="tanning" Source="TanningBtn.png"/>
+                    <Label x:Name="tanningLabel" Text="Tanning" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="taxi" Source="TaxiLimoBtn.png"/>
+                    <Label x:Name="taxiLabel" Text="Taxi and Limo" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+            </FlexLayout>
+            <FlexLayout>
+                <StackLayout>
+                    <Image x:Name="travel" Source="TravelAgencyBtn.png"/>
+                    <Label x:Name="travelLabel" Text="Travel Agency" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="wine" Source="WineBtn.png"/>
+                    <Label x:Name="wineLabel" Text="WIne" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout>
+                    <Image x:Name="women" Source="WomensClothingBtn.png"/>
+                    <Label x:Name="womenLabel" Text="Women's Clothing" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold"/>
+                </StackLayout>
+
+            </FlexLayout>
+
+
+
+        </StackLayout>
+    </ScrollView>
+    </StackLayout>
+</ContentPage>

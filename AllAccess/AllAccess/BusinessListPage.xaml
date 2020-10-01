@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:GradientPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:viewmodels="clr-namespace:AllAccess.ViewModels"
+             xmlns:controls="clr-namespace:AllAccess.Controls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAccess.BusinessListPage"
+					   NavigationPage.HasBackButton="False"
+					   NavigationPage.HasNavigationBar="False"
+                       StartColor="#002a6d"
+                       EndColor="Black">
+
+    <ContentPage.BindingContext>
+        <viewmodels:SearchViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <Frame CornerRadius="5" Padding="2">
+                        <StackLayout BackgroundColor="#013301" Orientation="Horizontal" Margin="5">
+                            <Image x:Name="back" Source="Back.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" Margin="5,0,0,0"/>
+                            <Label x:Name="title"  TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold"/>
+                            <Image x:Name="help" Source="Help.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,0,5,0"/>
+                        </StackLayout>
+                    </Frame>
+    <ListView x:Name="listView" 
+                  BackgroundColor="White" 
+                  HasUnevenRows="True"
+                  ItemTapped="OnTapped"
+                  ItemSelected="OnSelected"
+                  RowHeight="100"
+              SeparatorColor="White">
+            <ListView.SeparatorColor>
+                <OnPlatform x:TypeArguments="Color">
+                <On Platform="iOS, Android" Value="#013301"/>     
+                </OnPlatform>
+                </ListView.SeparatorColor>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding .}" TextColor="#013301" FontSize="Large" Margin="10"/>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+		<ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}">
+			<ActivityIndicator.Color>
+				<OnPlatform x:TypeArguments="Color">
+					<On Platform="Android, iOS" Value="White"/>
+				</OnPlatform>
+			</ActivityIndicator.Color>
+		</ActivityIndicator>
+	</StackLayout>
+   </controls:GradientPage>

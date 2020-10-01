@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:GradientPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:AllAccess.Controls"
+             xmlns:local="clr-namespace:AllAccess"
+             x:Class="AllAccess.MainPage"
+                       StartColor="#002a6d"
+                       EndColor="Black"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False"
+             Title="AllAccess.US">
+             <StackLayout>
+                <Frame CornerRadius="5" Padding="2">
+                <StackLayout BackgroundColor="#013301" Orientation="Horizontal" Margin="5">
+                    <Image Source="AllAccess.png" WidthRequest="50" HeightRequest="50" Margin="5,0,0,0"/>
+                    <Label Text = "AllAccess.US" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold"/>
+                    <Image x:Name="location" Source="SettingsBtn.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,0,5,0"/>
+                </StackLayout>
+            </Frame>
+     <ScrollView>
+        
+        <StackLayout BackgroundColor="Transparent">
+             <FlexLayout Margin="30, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <RelativeLayout>
+                    <Image x:Name="scan" Source="AllAccessScanningCircle.png" WidthRequest="130" HeightRequest="130" RelativeLayout.XConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0,
+                             Constant=0}"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0,
+                             Constant=0}" />
+                    <Image x:Name="logo" Source="AllAccess.png" WidthRequest="73" HeightRequest="73" RelativeLayout.XConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.195,
+                             Constant=0}"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0.12,
+                             Constant=0}"/>
+                 <Label Text="SCAN LOGOS" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" FontSize="Medium" Margin="0,0,0,15"
+                        RelativeLayout.XConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Width,
+                             Factor=0.13,
+                             Constant=0}"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=RelativeToParent,
+                             Property=Height,
+                             Factor=0.85,
+                             Constant=0}"/>
+                </RelativeLayout>
+                  
+                <StackLayout Padding="5">
+                    <Image x:Name="firstImage" Source="AutoTravelBtn.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="Access By Category" TextColor="White" HorizontalOptions="Center" FontSize="Large" LineBreakMode="WordWrap" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+            <FlexLayout Margin="25, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <StackLayout Padding="5">
+                    <Image x:Name="secondImage" Source="AccessByNameBtn.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="Access by Name" TextColor="White" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Padding="5" Margin="20,0,0,0">
+                    <Image x:Name="favorite" Source="FavoritesBtn.png" WidthRequest="130" HeightRequest="130"/>
+                        <Label TextColor="White" Text="Favorites" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+                <FlexLayout Margin="30, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <StackLayout Padding="5">
+                    <Image x:Name="twitterButton" Source="TWITTER.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="TWITTER" TextColor="White" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+                </StackLayout>
+                <StackLayout Padding="5" Margin="50,0,0,0" HorizontalOptions="End">
+                    <Image x:Name="facebookButton" Source="FacebookBtn.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="FACEBOOK" TextColor="White" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+                <FlexLayout  Margin="30, 10, 10, 10" HorizontalOptions="CenterAndExpand">
+                <StackLayout Padding="5">
+                    <Image x:Name="reviewButton" Source="ReviewAppBtn.png" WidthRequest="130" HeightRequest="130"/>
+                    <Label Text="REVIEW APP" TextColor="White" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+                </StackLayout>
+            </FlexLayout>
+        </StackLayout>
+       </ScrollView>
+        </StackLayout>
+</controls:GradientPage>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<controls:GradientPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:controls="clr-namespace:AllAccess.Controls"
+    xmlns:viewmodel="clr-namespace:AllAccess.ViewModels"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+    x:Class="AllAccess.DetailsPage"
+    NavigationPage.HasNavigationBar="False"
+    NavigationPage.HasBackButton="false"
+    StartColor="#002a6d"
+    EndColor="Black">
+    <controls:GradientPage.BindingContext>
+        <viewmodel:DetailViewModel/>
+        </controls:GradientPage.BindingContext>
+    <controls:GradientPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"/>
+            </Grid.ColumnDefinitions>
+        <StackLayout Margin="5">
+            <Frame CornerRadius="5" Padding="2">
+                <StackLayout BackgroundColor="#013301" Orientation="Horizontal" Margin="5">
+                    <Image x:Name="back" Source="Back.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" Margin="5,0,0,0"/>
+                    <Label x:Name="pageTitle" Text = "{Binding Name}" TextColor="White"  HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold"/>
+                    <Image x:Name="help" Source="Help.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,0,5,0"/>
+                </StackLayout>
+            </Frame>
+                <ScrollView>
+            <StackLayout BackgroundColor="Transparent" Padding="3">
+                    <FlexLayout>
+                    <StackLayout Margin="2">
+                        <Image x:Name="menu" Source="MENU.png" WidthRequest="120" HeightRequest="120"/>
+                        <Label x:Name="menuText" Text="MENU" TextColor="White" HorizontalOptions="Center"/>
+                        </StackLayout>
+               <StackLayout Margin="2">
+                        <Image x:Name="phone" Source="PHONE.png" WidthRequest="120" HeightRequest="120"/>
+                        <Label x:Name="phoneText" Text="PHONE" TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Margin="2">
+                        <Image x:Name="hours" Source="HOURS.png" WidthRequest="120" HeightRequest="120"/>
+                        <Label x:Name="hoursText" Text="HOURS" TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                        </FlexLayout>
+                    <FlexLayout>
+                    <StackLayout Margin="2">
+                            <Image x:Name="web" Source="WEBSITE.png" WidthRequest="120" HeightRequest="120"/>
+                        <Label x:Name="webText" Text="WEBSITE" TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Margin="2">
+                        <Image x:Name="map" Source="MAP.png" WidthRequest="120" HeightRequest="120"/>
+                        <Label TextColor="White" Text="MAP" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Margin="2">
+                        <Image x:Name="twit" Source="TWITTER.png" WidthRequest="120" HeightRequest="120"/>
+                        <Label Text="TWITTER" TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                        </FlexLayout>
+                    <FlexLayout>
+                    <StackLayout Margin="2">
+                        <Image x:Name="four" Source="FOURSQUARE.png" WidthRequest="120" HeightRequest="120"/>
+                        <Label x:Name="fourText" Text="FOURSQUARE" TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <StackLayout Margin="2">
+                        <Image x:Name="fave" Source="ADD_TO_FAVORITES.png" WidthRequest="120" HeightRequest="120"/>
+                        <Label x:Name="favor" Text="FAVORITES" TextColor="White" HorizontalOptions="Center"/>
+                    </StackLayout>
+                        </FlexLayout>
+                </StackLayout>
+                    </ScrollView>
+            </StackLayout> 
+            </Grid>
+    </controls:GradientPage.Content>
+</controls:GradientPage>

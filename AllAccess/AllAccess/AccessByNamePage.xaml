@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<controls:GradientPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:viewmodels="clr-namespace:AllAccess.ViewModels"
+			 xmlns:local ="clr-namespace:AllAccess.Data"
+             xmlns:controls="clr-namespace:AllAccess.Controls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllAccess.AccessByNamePage"
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="false"
+             StartColor="#002a6d"
+             EndColor="Black">
+        <controls:GradientPage.BindingContext>
+            <viewmodels:SearchViewModel/>
+        </controls:GradientPage.BindingContext>
+        <controls:GradientPage.Content>
+            <StackLayout>
+                <Frame CornerRadius="5" Padding="2">
+                        <StackLayout BackgroundColor="#013301" Orientation="Horizontal" Margin="5">
+                            <Image x:Name="back" Source="Back.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="Start" Margin="5,0,0,0"/>
+                            <Label Text ="AllAccess.US" TextColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" FontSize="25" FontAttributes="Bold"/>
+                            <Image x:Name="help" Source="Help.png" WidthRequest="50" HeightRequest="50" HorizontalOptions="End" Margin="0,0,5,0"/>
+                        </StackLayout>
+                    </Frame>
+<!--                <Switch x:Name="switch" IsToggled="{Binding UseGPS}"/>-->
+                <Entry x:Name="entryName" Text="{Binding MySearchText}" BackgroundColor="White" HorizontalOptions="CenterAndExpand" WidthRequest="500" Margin="10, 30, 10, 10"/>
+                <Button x:Name="accessButton" TextColor="White" BackgroundColor="#00cc00" HorizontalOptions="CenterAndExpand" WidthRequest="500" Text="ACCESS BY NAME" FontSize="Large" Command="{Binding GetSearchCommand}" BorderRadius="10" Margin="10, 10, 10, 30"/>
+            <Label x:Name="textLabel" TextColor="White" Text="Enter part of a business name to search for." FontSize="Large" HorizontalOptions="Center" Margin="20, 10, 20, 10"/>
+
+
+            <!--<Label Text="{Binding Address}" TextColor="White" FontSize="Large"/>-->
+                <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}">
+                <ActivityIndicator.Color>
+                        <OnPlatform x:TypeArguments="Color">
+                            <On Platform="Android, iOS" Value="White"/>
+                        </OnPlatform>
+                    </ActivityIndicator.Color>    
+                </ActivityIndicator>
+        
+            </StackLayout>
+        </controls:GradientPage.Content>
+</controls:GradientPage>
