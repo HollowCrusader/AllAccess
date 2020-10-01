@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F95C6DB-7EAC-49B0-BA1D-9992B6D407D2}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AllAccess.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>AllAccess.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\GradientPageRenderer.cs" />
+    <Compile Include="Renderers\DragDropListRenderer.cs" />
+    <Compile Include="Renderers\DragDropViewCellRenderer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\AA58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Messaging">
+      <Version>5.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Settings">
+      <Version>3.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.1.0.697729</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\AllAccess\AllAccess.csproj">
+      <Project>{8FCEE30B-CD16-4112-A68E-24120EAC1B7B}</Project>
+      <Name>AllAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\3miles.png" />
+    <BundleResource Include="Resources\tenmiles.png" />
+    <BundleResource Include="Resources\thirtymiles.png" />
+    <BundleResource Include="Resources\A_ZBtn.png" />
+    <BundleResource Include="Resources\AA58.png" />
+    <BundleResource Include="Resources\AA72.png" />
+    <BundleResource Include="Resources\AAMENU.png" />
+    <BundleResource Include="Resources\ABOUTUS.png" />
+    <BundleResource Include="Resources\AccessByCodesBtn.png" />
+    <BundleResource Include="Resources\AccessByNameBtn.png" />
+    <BundleResource Include="Resources\AccessMeCircle.png" />
+    <BundleResource Include="Resources\AccessUsCircle.png" />
+    <BundleResource Include="Resources\ADD_TO_FAVORITES.png" />
+    <BundleResource Include="Resources\Add.png" />
+    <BundleResource Include="Resources\AddBusinessBtn.png" />
+    <BundleResource Include="Resources\AddressButton.png" />
+    <BundleResource Include="Resources\AllAccess.png" />
+    <BundleResource Include="Resources\AllAccessBtn.png" />
+    <BundleResource Include="Resources\AllAccessButton.png" />
+    <BundleResource Include="Resources\AllAccessGreenScanCircleTransparent.png" />
+    <BundleResource Include="Resources\AllAccessScanningCircle.png" />
+    <BundleResource Include="Resources\AllAccessSymbolButton.png" />
+    <BundleResource Include="Resources\AllBtn.png" />
+    <BundleResource Include="Resources\AllRestaurantsBtn.png" />
+    <BundleResource Include="Resources\AmericanBtn.png" />
+    <BundleResource Include="Resources\AntiquesBtn.png" />
+    <BundleResource Include="Resources\APP.png" />
+    <BundleResource Include="Resources\AppBtn.png" />
+    <BundleResource Include="Resources\appicon_72.png" />
+    <BundleResource Include="Resources\ArcadeBtn.png" />
+    <BundleResource Include="Resources\ArrowButtons.psd" />
+    <BundleResource Include="Resources\ArtMuseumsBtn.png" />
+    <BundleResource Include="Resources\ArtsBtn.png" />
+    <BundleResource Include="Resources\AsianBtn.png" />
+    <BundleResource Include="Resources\ATMBanking.png" />
+    <BundleResource Include="Resources\ATMBankingBtn.png" />
+    <BundleResource Include="Resources\ATMS.png" />
+    <BundleResource Include="Resources\Auto.png" />
+    <BundleResource Include="Resources\AutoBtn.png" />
+    <BundleResource Include="Resources\AutoShopBtn.png" />
+    <BundleResource Include="Resources\AutoTravelBtn.png" />
+    <BundleResource Include="Resources\AVMENU.png" />
+    <BundleResource Include="Resources\BabyKidsBtn.png" />
+    <BundleResource Include="Resources\Back.png" />
+    <BundleResource Include="Resources\BagelsBtn.png" />
+    <BundleResource Include="Resources\BakeriesBtn.png" />
+    <BundleResource Include="Resources\BakeryBtn.png" />
+    <BundleResource Include="Resources\BankingBtn.png" />
+    <BundleResource Include="Resources\BarackObama.png" />
+    <BundleResource Include="Resources\BarCenter.png" />
+    <BundleResource Include="Resources\BarCenter2x.png" />
+    <BundleResource Include="Resources\BarLeft.png" />
+    <BundleResource Include="Resources\BarLeft2x.png" />
+    <BundleResource Include="Resources\BarPubBreweryBtn.png" />
+    <BundleResource Include="Resources\BarRight.png" />
+    <BundleResource Include="Resources\BarRight2x.png" />
+    <BundleResource Include="Resources\BarsBtn.png" />
+    <BundleResource Include="Resources\BBQBtn.png" />
+    <BundleResource Include="Resources\BedBreakfastBtn.png" />
+    <BundleResource Include="Resources\BiggerRadiusBtn.png" />
+    <BundleResource Include="Resources\BikingBtn.png" />
+    <BundleResource Include="Resources\BIRTHDAY.png" />
+    <BundleResource Include="Resources\BlackButton.png" />
+    <BundleResource Include="Resources\BLOG.png" />
+    <BundleResource Include="Resources\blueblackgradient.png" />
+    <BundleResource Include="Resources\bluegradient.png" />
+    <BundleResource Include="Resources\BoatingBtn.png" />
+    <BundleResource Include="Resources\BoutiqueBtn.png" />
+    <BundleResource Include="Resources\BowlingBtn.png" />
+    <BundleResource Include="Resources\BridalBtn.png" />
+    <BundleResource Include="Resources\British.png" />
+    <BundleResource Include="Resources\BritishBtn.png" />
+    <BundleResource Include="Resources\BuffetsBtn.png" />
+    <BundleResource Include="Resources\BurgersHotDogsBtn.png" />
+    <BundleResource Include="Resources\BusBtn.png" />
+    <BundleResource Include="Resources\CafeBistroBtn.png" />
+    <BundleResource Include="Resources\CajunBtn.png" />
+    <BundleResource Include="Resources\CampgroundBtn.png" />
+    <BundleResource Include="Resources\CarDealerBtn.png" />
+    <BundleResource Include="Resources\CarRentalBtn.png" />
+    <BundleResource Include="Resources\CarWashBtn.png" />
+    <BundleResource Include="Resources\CasinoBtn.png" />
+    <BundleResource Include="Resources\CATERING.png" />
+    <BundleResource Include="Resources\CateringBtn.png" />
+    <BundleResource Include="Resources\Change_Address.png" />
+    <BundleResource Include="Resources\ChangeAddress.png" />
+    <BundleResource Include="Resources\ChangeLocationBtn.png" />
+    <BundleResource Include="Resources\ChineseBtn.png" />
+    <BundleResource Include="Resources\clipboardwhite.png" />
+    <BundleResource Include="Resources\ClothingBtn.png" />
+    <BundleResource Include="Resources\CLUB.png" />
+    <BundleResource Include="Resources\CocaCola.png" />
+    <BundleResource Include="Resources\Code_Scan.png" />
+    <BundleResource Include="Resources\CoffeeBtn.png" />
+    <BundleResource Include="Resources\CoffeeTeaBtn.png" />
+    <BundleResource Include="Resources\CollegeBtn.png" />
+    <BundleResource Include="Resources\ComedyBtn.png" />
+    <BundleResource Include="Resources\ConcertsBtn.png" />
+    <BundleResource Include="Resources\ConcertsTheatreBtn.png" />
+    <BundleResource Include="Resources\ConsignmentVintageBtn.png" />
+    <BundleResource Include="Resources\Contact All Access.png" />
+    <BundleResource Include="Resources\CONTACT.png" />
+    <BundleResource Include="Resources\ContactBtn.png" />
+    <BundleResource Include="Resources\ContactUsBtn.png" />
+    <BundleResource Include="Resources\CONTEST.png" />
+    <BundleResource Include="Resources\CosmeticsBtn.png" />
+    <BundleResource Include="Resources\crosshair.png" />
+    <BundleResource Include="Resources\DairyQueen.png" />
+    <BundleResource Include="Resources\DancingBtn.png" />
+    <BundleResource Include="Resources\DancingGirlBtn.png" />
+    <BundleResource Include="Resources\DarienLake.png" />
+    <BundleResource Include="Resources\Dashboard.png" />
+    <BundleResource Include="Resources\DEALS.png" />
+    <BundleResource Include="Resources\DealsBtn.png" />
+    <BundleResource Include="Resources\DeliSandwichesBtn.png" />
+    <BundleResource Include="Resources\DELIVERY.png" />
+    <BundleResource Include="Resources\DentalBtn.png" />
+    <BundleResource Include="Resources\DessertIceCreamBtn.png" />
+    <BundleResource Include="Resources\DessertsBtn.png" />
+    <BundleResource Include="Resources\DinerBreakfastBtn.png" />
+    <BundleResource Include="Resources\DinnerBell.png" />
+    <BundleResource Include="Resources\DistilleryBtn.png" />
+    <BundleResource Include="Resources\DoctorBtn.png" />
+    <BundleResource Include="Resources\DonaldTrump.png" />
+    <BundleResource Include="Resources\DONATE.png" />
+    <BundleResource Include="Resources\Done.png" />
+    <BundleResource Include="Resources\DrugsMedical.png" />
+    <BundleResource Include="Resources\DrugsMedicalBtn.png" />
+    <BundleResource Include="Resources\DrugStoreBtn.png" />
+    <BundleResource Include="Resources\DryCleanersBtn.png" />
+    <BundleResource Include="Resources\EDIT BUSINESS.png" />
+    <BundleResource Include="Resources\Edit.png" />
+    <BundleResource Include="Resources\EducationBtn.png" />
+    <BundleResource Include="Resources\ElectronicsBtn.png" />
+    <BundleResource Include="Resources\EMAIL.png" />
+    <BundleResource Include="Resources\EmailBtn.png" />
+    <BundleResource Include="Resources\eMenuButton.png" />
+    <BundleResource Include="Resources\EnterAddressBtn.png" />
+    <BundleResource Include="Resources\establish.png" />
+    <BundleResource Include="Resources\establish2x.png" />
+    <BundleResource Include="Resources\EuropeanBtn.png" />
+    <BundleResource Include="Resources\EVENTS.png" />
+    <BundleResource Include="Resources\EventsBtn.png" />
+    <BundleResource Include="Resources\EventSpaceBtn.png" />
+    <BundleResource Include="Resources\FACEBOOK.png" />
+    <BundleResource Include="Resources\FacebookBtn.png" />
+    <BundleResource Include="Resources\FANS.png" />
+    <BundleResource Include="Resources\FAQS.png" />
+    <BundleResource Include="Resources\FastFoodBtn.png" />
+    <BundleResource Include="Resources\FavoritesBtn.png" />
+    <BundleResource Include="Resources\FEEDBACK.png" />
+    <BundleResource Include="Resources\FinancialBtn.png" />
+    <BundleResource Include="Resources\FitnessBtn.png" />
+    <BundleResource Include="Resources\flashoff.png" />
+    <BundleResource Include="Resources\flashon.png" />
+    <BundleResource Include="Resources\FloristsBtn.png" />
+    <BundleResource Include="Resources\Follow_Us.png" />
+    <BundleResource Include="Resources\Food.png" />
+    <BundleResource Include="Resources\FoodBtn.png" />
+    <BundleResource Include="Resources\FoodDrinkBtn.png" />
+    <BundleResource Include="Resources\FoodTruckBtn.png" />
+    <BundleResource Include="Resources\FOURSQUARE.png" />
+    <BundleResource Include="Resources\frame.png" />
+    <BundleResource Include="Resources\FrenchBtn.png" />
+    <BundleResource Include="Resources\Fun.png" />
+    <BundleResource Include="Resources\FunBtn.png" />
+    <BundleResource Include="Resources\FUNDRAISING.png" />
+    <BundleResource Include="Resources\FunNightlifeBtn.png" />
+    <BundleResource Include="Resources\GamesBtn.png" />
+    <BundleResource Include="Resources\GasBtn.png" />
+    <BundleResource Include="Resources\GermanBtn.png" />
+    <BundleResource Include="Resources\GIFTCARDS.png" />
+    <BundleResource Include="Resources\GiftsBtn.png" />
+    <BundleResource Include="Resources\GoKartsBtn.png" />
+    <BundleResource Include="Resources\GolfBtn.png" />
+    <BundleResource Include="Resources\GOOGLE_plus.png" />
+    <BundleResource Include="Resources\GOOGLEPLUS.png" />
+    <BundleResource Include="Resources\GourmetOrganicBtn.png" />
+    <BundleResource Include="Resources\GPSbutton.png" />
+    <BundleResource Include="Resources\grabbing.png" />
+    <BundleResource Include="Resources\GreekBtn.png" />
+    <BundleResource Include="Resources\GreekMediterraneanBtn.png" />
+    <BundleResource Include="Resources\greenbg.png" />
+    <BundleResource Include="Resources\greenbutton.png" />
+    <BundleResource Include="Resources\GreenCircle.png" />
+    <BundleResource Include="Resources\GreenSign320gradient.png" />
+    <BundleResource Include="Resources\GreenSign768gradient.png" />
+    <BundleResource Include="Resources\GroceryBtn.png" />
+    <BundleResource Include="Resources\HairSalonBtn.png" />
+    <BundleResource Include="Resources\HardwareBtn.png" />
+    <BundleResource Include="Resources\Health.png" />
+    <BundleResource Include="Resources\HealthBtn.png" />
+    <BundleResource Include="Resources\HealthFoodBtn.png" />
+    <BundleResource Include="Resources\HealthPurple.png" />
+    <BundleResource Include="Resources\HealthServicesBtn.png" />
+    <BundleResource Include="Resources\HeatingAC.png" />
+    <BundleResource Include="Resources\HeatingAC3.png" />
+    <BundleResource Include="Resources\HeatingAC4.png" />
+    <BundleResource Include="Resources\HeatingACBtn.png" />
+    <BundleResource Include="Resources\HelendaleDermatology.png" />
+    <BundleResource Include="Resources\Help.png" />
+    <BundleResource Include="Resources\history.png" />
+    <BundleResource Include="Resources\HistoryBtn.png" />
+    <BundleResource Include="Resources\HomeBtn.png" />
+    <BundleResource Include="Resources\HomeButton.png" />
+    <BundleResource Include="Resources\HomeImprovementBtn.png" />
+    <BundleResource Include="Resources\HomeServicesBtn.png" />
+    <BundleResource Include="Resources\HospitalBtn.png" />
+    <BundleResource Include="Resources\HotelBtn.png" />
+    <BundleResource Include="Resources\HOURS.png" />
+    <BundleResource Include="Resources\IndianBtn.png" />
+    <BundleResource Include="Resources\INSTAGRAM.png" />
+    <BundleResource Include="Resources\IrishBtn.png" />
+    <BundleResource Include="Resources\ItalianBtn.png" />
+    <BundleResource Include="Resources\JapaneseBtn.png" />
+    <BundleResource Include="Resources\JewelryBtn.png" />
+    <BundleResource Include="Resources\JOBS.png" />
+    <BundleResource Include="Resources\JuiceBarBtn.png" />
+    <BundleResource Include="Resources\K_12Btn.png" />
+    <BundleResource Include="Resources\KoreanBtn.png" />
+    <BundleResource Include="Resources\KosherBtn.png" />
+    <BundleResource Include="Resources\LegalFinancialBtn.png" />
+    <BundleResource Include="Resources\LingerieBtn.png" />
+    <BundleResource Include="Resources\LINKEDIN.png" />
+    <BundleResource Include="Resources\LiquorBtn.png" />
+    <BundleResource Include="Resources\LISTINGS.png" />
+    <BundleResource Include="Resources\LocationBtn.png" />
+    <BundleResource Include="Resources\LocksmithBtn.png" />
+    <BundleResource Include="Resources\login.png" />
+    <BundleResource Include="Resources\Logo Launcher.png" />
+    <BundleResource Include="Resources\LogoGrab.png" />
+    <BundleResource Include="Resources\LogoLauncher.png" />
+    <BundleResource Include="Resources\MAINTENANCE.png" />
+    <BundleResource Include="Resources\MallBtn.png" />
+    <BundleResource Include="Resources\MAP.png" />
+    <BundleResource Include="Resources\MapBtn.png" />
+    <BundleResource Include="Resources\MarkCuban.png" />
+    <BundleResource Include="Resources\MEALS.png" />
+    <BundleResource Include="Resources\MealsBtn.png" />
+    <BundleResource Include="Resources\MedicalBtn.png" />
+    <BundleResource Include="Resources\MedicalSupplyCenterBtn.png" />
+    <BundleResource Include="Resources\MediterraneanBtn.png" />
+    <BundleResource Include="Resources\MensClothingBtn.png" />
+    <BundleResource Include="Resources\MENU.png" />
+    <BundleResource Include="Resources\MenuBtn.png" />
+    <BundleResource Include="Resources\MenuButton.png" />
+    <BundleResource Include="Resources\MexicanBtn.png" />
+    <BundleResource Include="Resources\MiniGolfBtn.png" />
+    <BundleResource Include="Resources\minusfive.png" />
+    <BundleResource Include="Resources\MobileBtn.png" />
+    <BundleResource Include="Resources\MotorcycleBtn.png" />
+    <BundleResource Include="Resources\MovieBtn.png" />
+    <BundleResource Include="Resources\MuseumBtn.png" />
+    <BundleResource Include="Resources\MusicBtn.png" />
+    <BundleResource Include="Resources\MusicShopBtn.png" />
+    <BundleResource Include="Resources\MY_SPECIAL_DAYS.png" />
+    <BundleResource Include="Resources\MyAllAccess.png" />
+    <BundleResource Include="Resources\MyAllAccessIcon.png" />
+    <BundleResource Include="Resources\MyFavoritesBtn.png" />
+    <BundleResource Include="Resources\MYSPECIALDAYS.png" />
+    <BundleResource Include="Resources\MySpecialDaysBtn.png" />
+    <BundleResource Include="Resources\NailSalonBtn.png" />
+    <BundleResource Include="Resources\NameButton.png" />
+    <BundleResource Include="Resources\NameSearchBtn.png" />
+    <BundleResource Include="Resources\NEWS.png" />
+    <BundleResource Include="Resources\Newspaper.png" />
+    <BundleResource Include="Resources\Next.png" />
+    <BundleResource Include="Resources\NightclubBtn.png" />
+    <BundleResource Include="Resources\NightlifeBtn.png" />
+    <BundleResource Include="Resources\No.png" />
+    <BundleResource Include="Resources\NoSpeak.png" />
+    <BundleResource Include="Resources\NUTRITION.png" />
+    <BundleResource Include="Resources\oldREVEAL.png" />
+    <BundleResource Include="Resources\oldREVEALADEAL.png" />
+    <BundleResource Include="Resources\Open.png" />
+    <BundleResource Include="Resources\OpenBrowser.png" />
+    <BundleResource Include="Resources\OpticalBtn.png" />
+    <BundleResource Include="Resources\Options.png" />
+    <BundleResource Include="Resources\ORDER.png" />
+    <BundleResource Include="Resources\ParkingBtn.png" />
+    <BundleResource Include="Resources\PawnShopBtn.png" />
+    <BundleResource Include="Resources\PerformingArtsBtn.png" />
+    <BundleResource Include="Resources\PetsBtn.png" />
+    <BundleResource Include="Resources\PharmacyBtn.png" />
+    <BundleResource Include="Resources\PHONE.png" />
+    <BundleResource Include="Resources\PhotoBtn.png" />
+    <BundleResource Include="Resources\PhotoNeeded.png" />
+    <BundleResource Include="Resources\PhotoNeededNoBox.png" />
+    <BundleResource Include="Resources\PHOTOS.png" />
+    <BundleResource Include="Resources\PiercingBtn.png" />
+    <BundleResource Include="Resources\PINTEREST.png" />
+    <BundleResource Include="Resources\PizzaBtn.png" />
+    <BundleResource Include="Resources\PlaygroundBtn.png" />
+    <BundleResource Include="Resources\PlumbingBtn.png" />
+    <BundleResource Include="Resources\plusfive.png" />
+    <BundleResource Include="Resources\Porsche.png" />
+    <BundleResource Include="Resources\poweredbyfoursquare.png" />
+    <BundleResource Include="Resources\poweredByFoursquare_16x16.png" />
+    <BundleResource Include="Resources\poweredByFoursquare_36x36.png" />
+    <BundleResource Include="Resources\poweredByFoursquare_gray.png" />
+    <BundleResource Include="Resources\poweredByFoursquare_white.png" />
+    <BundleResource Include="Resources\poweredbylocu.png" />
+    <BundleResource Include="Resources\PrintShopBtn.png" />
+    <BundleResource Include="Resources\QR1.png" />
+    <BundleResource Include="Resources\QR2.png" />
+    <BundleResource Include="Resources\QR3.png" />
+    <BundleResource Include="Resources\QR4.png" />
+    <BundleResource Include="Resources\QRbutton.png" />
+    <BundleResource Include="Resources\QRcodebutton.png" />
+    <BundleResource Include="Resources\RacingBtn.png" />
+    <BundleResource Include="Resources\RadarImage.png" />
+    <BundleResource Include="Resources\RadarSymbol.psd" />
+    <BundleResource Include="Resources\RATES.png" />
+    <BundleResource Include="Resources\RealEstateBtn.png" />
+    <BundleResource Include="Resources\RECIPES.png" />
+    <BundleResource Include="Resources\RedBar.png" />
+    <BundleResource Include="Resources\REPAIR.png" />
+    <BundleResource Include="Resources\RepairBtn.png" />
+    <BundleResource Include="Resources\REPLACE.png" />
+    <BundleResource Include="Resources\RESERVATIONS.png" />
+    <BundleResource Include="Resources\RESERVE.png" />
+    <BundleResource Include="Resources\RestaurantsBtn.png" />
+    <BundleResource Include="Resources\REVEAL_A_DEAL.png" />
+    <BundleResource Include="Resources\RevealButton.png" />
+    <BundleResource Include="Resources\Review_App.png" />
+    <BundleResource Include="Resources\ReviewAppBtn.png" />
+    <BundleResource Include="Resources\ReviewPencil.png" />
+    <BundleResource Include="Resources\REWARDS.png" />
+    <BundleResource Include="Resources\RoundedFrame.png" />
+    <BundleResource Include="Resources\RoundedFrameNew.png" />
+    <BundleResource Include="Resources\SaladBtn.png" />
+    <BundleResource Include="Resources\SalonBtn.png" />
+    <BundleResource Include="Resources\SandwichesBtn.png" />
+    <BundleResource Include="Resources\Scan_Code.png" />
+    <BundleResource Include="Resources\Scan.png" />
+    <BundleResource Include="Resources\ScanButton.png" />
+    <BundleResource Include="Resources\ScanCodesBtn.png" />
+    <BundleResource Include="Resources\ScanKeyhole.png" />
+    <BundleResource Include="Resources\ScanKeyholeBlue.png" />
+    <BundleResource Include="Resources\ScanSpot.png" />
+    <BundleResource Include="Resources\SchoolsBtn.png" />
+    <BundleResource Include="Resources\SeafoodBtn.png" />
+    <BundleResource Include="Resources\Search_Nearby.png" />
+    <BundleResource Include="Resources\Search_Radius.png" />
+    <BundleResource Include="Resources\Search.png" />
+    <BundleResource Include="Resources\searchbyname.png" />
+    <BundleResource Include="Resources\searchradius.png" />
+    <BundleResource Include="Resources\Selected.png" />
+    <BundleResource Include="Resources\SERVICE.png" />
+    <BundleResource Include="Resources\ServicesBtn.png" />
+    <BundleResource Include="Resources\Settings.png" />
+    <BundleResource Include="Resources\SettingsBtn.png" />
+    <BundleResource Include="Resources\ShoesBtn.png" />
+    <BundleResource Include="Resources\SHOP.png" />
+    <BundleResource Include="Resources\SHOPCART.png" />
+    <BundleResource Include="Resources\SHOPPING.png" />
+    <BundleResource Include="Resources\ShoppingBtn.png" />
+    <BundleResource Include="Resources\SkatingBtn.png" />
+    <BundleResource Include="Resources\SkiingBtn.png" />
+    <BundleResource Include="Resources\SKYPE.png" />
+    <BundleResource Include="Resources\slowalert.png" />
+    <BundleResource Include="Resources\slowalert2x.png" />
+    <BundleResource Include="Resources\SmallerRadiusBtn.png" />
+    <BundleResource Include="Resources\SoupBtn.png" />
+    <BundleResource Include="Resources\SouthernBtn.png" />
+    <BundleResource Include="Resources\SpaBtn.png" />
+    <BundleResource Include="Resources\SpanishBtn.png" />
+    <BundleResource Include="Resources\Speak.png" />
+    <BundleResource Include="Resources\SPECIALS.png" />
+    <BundleResource Include="Resources\SpiritualBtn.png" />
+    <BundleResource Include="Resources\SportingGoodsBtn.png" />
+    <BundleResource Include="Resources\SportsBtn.png" />
+    <BundleResource Include="Resources\SPOTdashboard.png" />
+    <BundleResource Include="Resources\Starbucks.png" />
+    <BundleResource Include="Resources\StartButton.png" />
+    <BundleResource Include="Resources\SteakhouseBtn.png" />
+    <BundleResource Include="Resources\STORE.png" />
+    <BundleResource Include="Resources\Submit_Logo.png" />
+    <BundleResource Include="Resources\Submit_Photo.png" />
+    <BundleResource Include="Resources\SubmitLogo.png" />
+    <BundleResource Include="Resources\SubmitPhoto.png" />
+    <BundleResource Include="Resources\SubsBtn.png" />
+    <BundleResource Include="Resources\Subway.png" />
+    <BundleResource Include="Resources\SubwayBtn.png" />
+    <BundleResource Include="Resources\SURVEY.png" />
+    <BundleResource Include="Resources\TABLE.png" />
+    <BundleResource Include="Resources\TailorBtn.png" />
+    <BundleResource Include="Resources\TalkingRingtones.png" />
+    <BundleResource Include="Resources\TalkingSoundboard.png" />
+    <BundleResource Include="Resources\TanningBtn.png" />
+    <BundleResource Include="Resources\TattooBtn.png" />
+    <BundleResource Include="Resources\TattooPiercingBtn.png" />
+    <BundleResource Include="Resources\TaxiBtn.png" />
+    <BundleResource Include="Resources\TaxiLimoBtn.png" />
+    <BundleResource Include="Resources\TEAM.png" />
+    <BundleResource Include="Resources\Thai.png" />
+    <BundleResource Include="Resources\ThaiBtn.png" />
+    <BundleResource Include="Resources\TheatreBtn.png" />
+    <BundleResource Include="Resources\ThemeParkBtn.png" />
+    <BundleResource Include="Resources\TICKETS.png" />
+    <BundleResource Include="Resources\ToysBtn.png" />
+    <BundleResource Include="Resources\TRACKER.png" />
+    <BundleResource Include="Resources\TrainBtn.png" />
+    <BundleResource Include="Resources\Travel.png" />
+    <BundleResource Include="Resources\TravelAgencyBtn.png" />
+    <BundleResource Include="Resources\TravelBtn.png" />
+    <BundleResource Include="Resources\TutorTrade_SchoolBtn.png" />
+    <BundleResource Include="Resources\TutorTradeschoolBtn.png" />
+    <BundleResource Include="Resources\TWITTER.png" />
+    <BundleResource Include="Resources\TwitterBtn.png" />
+    <BundleResource Include="Resources\TypeNameButton.png" />
+    <BundleResource Include="Resources\UKBtn.png" />
+    <BundleResource Include="Resources\UseGPSBtn.png" />
+    <BundleResource Include="Resources\VeganBtn.png" />
+    <BundleResource Include="Resources\VegetarianBtn.png" />
+    <BundleResource Include="Resources\VIDEOS.png" />
+    <BundleResource Include="Resources\Vietnamese.png" />
+    <BundleResource Include="Resources\VietnameseBtn.png" />
+    <BundleResource Include="Resources\VineyardsBtn.png" />
+    <BundleResource Include="Resources\VintageBtn.png" />
+    <BundleResource Include="Resources\Warning.png" />
+    <BundleResource Include="Resources\WEATHER.png" />
+    <BundleResource Include="Resources\WEB.png" />
+    <BundleResource Include="Resources\WebBtn.png" />
+    <BundleResource Include="Resources\WEBCAM.png" />
+    <BundleResource Include="Resources\WEBSITE.png" />
+    <BundleResource Include="Resources\WeddingBtn.png" />
+    <BundleResource Include="Resources\WhiteBorder.png" />
+    <BundleResource Include="Resources\WhiteRoundedRectangle.png" />
+    <BundleResource Include="Resources\WineBtn.png" />
+    <BundleResource Include="Resources\WingsBtn.png" />
+    <BundleResource Include="Resources\WomensClothingBtn.png" />
+    <BundleResource Include="Resources\Yankees.png" />
+    <BundleResource Include="Resources\YELP.png" />
+    <BundleResource Include="Resources\Yes.png" />
+    <BundleResource Include="Resources\YOUTUBE.png" />
+    <BundleResource Include="Resources\ZooBtn.png" />
+  </ItemGroup>
+  <ItemGroup />
+</Project>

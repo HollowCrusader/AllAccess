@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14F6a" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment version="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qjl-mw-aXi"/>
+                        <viewControllerLayoutGuide type="bottom" id="xOV-Kb-Ibv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaK-lJ-P7f">
+                                <rect key="frame" x="319" y="223" width="140" height="140"/>
+                                <accessibility key="accessibilityConfiguration" label="">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="logograb_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1i-oP-DRu">
+                                <rect key="frame" x="220" y="480" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration" label="Restaurants"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="FoodDrinkBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFood:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8N7-kR-2iA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Di-dj-N70">
+                                <rect key="frame" x="40" y="480" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration" label="Automotive Businesses"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="AutoBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAuto:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tib-JL-NDW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqy-xl-1KP">
+                                <rect key="frame" x="400" y="480" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration" label="Entertainment"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="FunBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFun:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="v9g-fy-d3X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LxU-1N-pFQ">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="180"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="GreenSign768gradient.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGl-xR-XA4">
+                                <rect key="frame" x="26" y="188" width="200" height="200"/>
+                                <accessibility key="accessibilityConfiguration" label="Search by Name"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="ByName.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnName:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0Hc-39-dLq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2J2-bF-tkO">
+                                <rect key="frame" x="40" y="40" width="100" height="100"/>
+                                <accessibility key="accessibilityConfiguration" label="About All Access"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="AllAccess.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnHelp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="y9o-YU-9yg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZ2-gs-80s">
+                                <rect key="frame" x="630" y="40" width="100" height="100"/>
+                                <accessibility key="accessibilityConfiguration" label="About All Access"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="SettingsBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSettings:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rxh-4h-t3n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CW-1W-3Zr">
+                                <rect key="frame" x="543" y="188" width="200" height="200"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="WhiteRoundedRectangle.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czU-eA-hqv">
+                                <rect key="frame" x="560" y="203" width="165" height="171"/>
+                                <accessibility key="accessibilityConfiguration" label="Scan QR Codes"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="Code Scan.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnCode:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Mbp-3I-Avv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ph-SF-AiT">
+                                <rect key="frame" x="220" y="742" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration" label="Shopping"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="WeddingBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnWedding:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HoV-lk-4Ra"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxa-S6-D5T">
+                                <rect key="frame" x="40" y="742" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration" label="Shopping"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="ShoppingBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnShopping:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="DyH-lO-xpm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dci-sM-nXH">
+                                <rect key="frame" x="580" y="742" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration" label="Shopping"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="FavoritesBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFavorites:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SGi-OW-JEz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NI9-qZ-xCl">
+                                <rect key="frame" x="580" y="480" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration" label="Health-related Businesses"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="HealthServicesBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnService:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sbI-oX-3al"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRO-ma-E7v">
+                                <rect key="frame" x="400" y="742" width="160" height="160"/>
+                                <accessibility key="accessibilityConfiguration" label="Travel-related Businesses"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="AllAccessSymbolButton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnContact:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ugQ-eq-Ljd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AllAccess.US" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnW-KJ-3LU">
+                                <rect key="frame" x="160" y="49" width="449" height="85"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="65"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCAN LOGOS" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9Z-Dl-eaA">
+                                <rect key="frame" x="281" y="385" width="207" height="50"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME SEARCH" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAE-II-Ykr">
+                                <rect key="frame" x="23" y="385" width="207" height="50"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCAN CODES" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUU-em-sWO">
+                                <rect key="frame" x="540" y="385" width="207" height="50"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FOOD &amp; DRINK" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="160" translatesAutoresizingMaskIntoConstraints="NO" id="Dhu-YA-oDI">
+                                <rect key="frame" x="220" y="640" width="160" height="80"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AUTO &amp; TRAVEL" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="160" translatesAutoresizingMaskIntoConstraints="NO" id="bLd-ry-std">
+                                <rect key="frame" x="40" y="640" width="160" height="80"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FUN &amp; NIGHTLIFE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="160" translatesAutoresizingMaskIntoConstraints="NO" id="P8F-Zv-13P">
+                                <rect key="frame" x="400" y="640" width="160" height="80"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SHOPPING" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="160" translatesAutoresizingMaskIntoConstraints="NO" id="aV4-cK-eT1">
+                                <rect key="frame" x="40" y="910" width="160" height="80"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WEDDING" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="160" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-KF-6Pg">
+                                <rect key="frame" x="220" y="910" width="160" height="80"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ALL ACCESS" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" preferredMaxLayoutWidth="160" translatesAutoresizingMaskIntoConstraints="NO" id="I5T-m9-j92">
+                                <rect key="frame" x="400" y="910" width="160" height="80"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HEALTH &amp; SERVICES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="160" translatesAutoresizingMaskIntoConstraints="NO" id="pUU-Vp-NZg">
+                                <rect key="frame" x="580" y="640" width="160" height="80"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FAVORITES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="166" translatesAutoresizingMaskIntoConstraints="NO" id="m2Y-Tb-Phr">
+                                <rect key="frame" x="580" y="910" width="166" height="80"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iza-aV-A27">
+                                <rect key="frame" x="289" y="193" width="200" height="200"/>
+                                <accessibility key="accessibilityConfiguration" label="Scan Logos to access business info"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="AllAccessScanningCircle.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLaunchLogoGrab:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="n66-AU-bhb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139" y="-687"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AllAccess.png" width="466" height="466"/>
+        <image name="AllAccessScanningCircle.png" width="800" height="800"/>
+        <image name="AllAccessSymbolButton.png" width="200" height="200"/>
+        <image name="AutoBtn.png" width="200" height="200"/>
+        <image name="ByName.png" width="752" height="752"/>
+        <image name="Code Scan.png" width="200" height="200"/>
+        <image name="FavoritesBtn.png" width="200" height="200"/>
+        <image name="FoodDrinkBtn.png" width="200" height="200"/>
+        <image name="FunBtn.png" width="200" height="200"/>
+        <image name="GreenSign768gradient.png" width="768" height="180"/>
+        <image name="HealthServicesBtn.png" width="200" height="200"/>
+        <image name="SettingsBtn.png" width="200" height="200"/>
+        <image name="ShoppingBtn.png" width="200" height="200"/>
+        <image name="WeddingBtn.png" width="200" height="200"/>
+        <image name="WhiteRoundedRectangle.png" width="200" height="200"/>
+        <image name="logograb_icon.png" width="200" height="200"/>
+    </resources>
+    <color key="tintColor" red="0.0" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+</document>
